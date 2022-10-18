@@ -82,7 +82,7 @@ section {
   margin-right: 318px;
 }
 
-.pages-nav .link {
+.nav-link {
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -93,8 +93,8 @@ section {
   text-decoration: none;
 }
 
-.pages-nav .link:hover,
-.pages-nav .link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--color-accent);
 }
 
@@ -272,7 +272,7 @@ section {
   position: relative;
 }
 
-.work-thumb::before {
+/* .work-thumb::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -290,6 +290,22 @@ section {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--color-white);
+} */
+
+.work-thumb>.work-meta {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  padding-top: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
   color: var(--color-white);
 }
 
@@ -422,7 +438,7 @@ section {
   margin-bottom: 50px;
 }
 
-.list-button > .menu-item:not(:last-child) {
+.list-button>.menu-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -526,7 +542,7 @@ section {
   list-style-type: none;
 }
 
-.footer-contacs > .footer-item:not(:last-child) {
+.footer-contacs>.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
