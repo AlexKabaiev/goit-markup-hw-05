@@ -58,7 +58,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <section class="features">
@@ -153,15 +153,15 @@
             </li>
             <li class="work-item">
               <div class="work-thumb">
-              <img
-                class="work-img"
-                src="./images/box3.jpg"
-                alt="Розробляємо дизайн проекту"
-                width="370"
-                height="294"
-              />
-              <h3 class="work-meta">Дізайнерські рішення</h3>
-            </div>
+                <img
+                  class="work-img"
+                  src="./images/box3.jpg"
+                  alt="Розробляємо дизайн проекту"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="work-meta">Дізайнерські рішення</h3>
+              </div>
             </li>
           </ul>
         </div>
@@ -462,6 +462,23 @@
         </div>
       </div>
     </footer>
-    <script> src="./js/modal.js"</script>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quis veritatis quia labore
+          maxime praesentium sequi at corporis iste consequuntur eos accusantium totam officiis
+          explicabo dicta enim non, illo voluptate iusto nulla? Molestiae facilis in accusamus
+          fugiat beatae quia, eius soluta recusandae numquam voluptates ratione aut dolorum sit
+          natus nostrum, asperiores, vitae possimus fugit excepturi tempora labore commodi impedit
+          harum. Qui culpa inventore nulla corporis. Deserunt, eligendi esse. Numquam dicta facilis,
+          voluptate sunt error, maiores deleniti, quis voluptatem illum id et molestiae impedit
+          repellendus. Sapiente atque pariatur nostrum rerum fugiat, doloribus incidunt porro,
+          reiciendis veritatis voluptatibus placeat, at facilis quis!
+        </p>
+        <button class="modal-close-button" type="button" data-modal-close>Close</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
