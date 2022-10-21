@@ -18,6 +18,10 @@ body {
   background-color: var(--color-white);
 }
 
+ul {
+  list-style-type: none;
+}
+
 h1,
 h2,
 h3,
@@ -76,7 +80,6 @@ section {
 /* Навигация по страницам */
 .pages-nav {
   display: flex;
-  list-style-type: none;
   justify-content: space-between;
   width: 281px;
   margin-right: 318px;
@@ -92,6 +95,7 @@ section {
   letter-spacing: 0.02em;
   color: var(--color-brand);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -100,21 +104,20 @@ section {
 }
 
 .current-page::after {
-display: inline-block;
-position: absolute;
-content: "";
-width: 100%;
-height: 4px;
-left: 0;
-bottom: -2px;
-background-color: var(--color-accent);
-border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -2px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
 }
 
 /* Стилизация контактов в шапке */
 .header-contacts-list {
   display: flex;
-  list-style-type: none;
   align-items: center;
   gap: 30px;
 }
@@ -146,6 +149,7 @@ border-radius: 2px;
   letter-spacing: 0.02em;
   color: var(--color-primary);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-head:hover,
@@ -203,6 +207,7 @@ border-radius: 2px;
   color: var(--color-white);
   background-color: var(--color-accent);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -235,7 +240,6 @@ border-radius: 2px;
   justify-content: space-between;
   height: 98px;
   margin: 0 auto;
-  list-style-type: none;
 }
 
 .features-item {
@@ -278,7 +282,6 @@ border-radius: 2px;
 .work-list {
   display: flex;
   justify-content: space-between;
-  list-style-type: none;
 }
 
 .work-thumb {
@@ -346,7 +349,6 @@ border-radius: 2px;
 .team-list {
   display: flex;
   justify-content: space-between;
-  list-style-type: none;
 }
 
 .team-item {
@@ -396,6 +398,7 @@ border-radius: 2px;
   fill: var(--color-gray-icons);
   background-color: var(--color-white);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -431,6 +434,7 @@ border-radius: 2px;
   border-radius: 4px;
   border: 1px solid var(--color-gray-icons);
   fill: var(--color-gray-icons);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -447,7 +451,6 @@ border-radius: 2px;
 .list-button {
   display: flex;
   justify-content: center;
-  list-style-type: none;
   margin-bottom: 50px;
 }
 
@@ -469,6 +472,7 @@ border-radius: 2px;
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-button:hover,
@@ -482,12 +486,38 @@ border-radius: 2px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  list-style-type: none;
 }
 
 .projects-item {
   width: 370px;
   background: var(--color-white);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  transform: translateY(100%);
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-item:hover .projects-description {
+  transform: translateY(0);
 }
 
 .projects-item:hover,
@@ -551,10 +581,6 @@ border-radius: 2px;
   font-style: normal;
 }
 
-.footer-contacs {
-  list-style-type: none;
-}
-
 .footer-contacs>.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -609,6 +635,7 @@ border-radius: 2px;
   fill: var(--color-white);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
